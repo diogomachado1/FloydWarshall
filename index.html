@@ -1,0 +1,51 @@
+<head>
+
+
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <h1>Floyd-Warshall</h1>
+        <div class="alert alert-danger" role="alert">
+            <p >Nos caminho coloque apenas o par de vertices e a distancia, tambem separando-os por espaço,exemplo: O caminho
+                do ponto 2 ao 3 tem peso 4, ficaria 2 3 4</p>
+            <p id="alertas" ></p>
+        </div>
+        <form>
+            <div class="row px-3">
+
+                <div class="col px-0">
+                    <input id="files" class="m-1" type="file">
+                </div>
+            </div>
+            <div class="row px-3">
+                <div class="col-2 px-0">
+                    <div class="row px-3">
+                        <label>Caminho:</label>
+                    </div>
+                    <div class="row px-3">
+                        <button id="aumentar" type="button" class="m-1 btn btn-primary p-2">+</button>
+                        <button id="diminuir" type="button" class="m-1 btn btn-primary">-</button>
+                        <button id="destravar" type="button" class="m-1 btn btn-primary px-2" hidden>destravar</button>
+                        <button type="submit" class="m-1 btn btn-primary px-2">Calcular</button>
+                    </div>
+                </div>
+                <div class="col px-0">
+                    <div id='caminhos'>
+                        <input class="caminho m-1" type="text">
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </form>
+        <div id="result" class="col-2">
+            <table>
+
+            </table>
+        </div>
+    </div>
+    <script src="controller.js"></script>
+</body>
