@@ -1,6 +1,6 @@
 const electron = require('electron');
 const { app, BrowserWindow, ipcMain } = electron;
-const floydWarshall = require('./floydWarshall')
+const floydWarshall = require('./Model/floydWarshall')
 let fs = require('fs');
 
 let mainWindow;
@@ -10,8 +10,8 @@ let pathG;
 //inicializar o programa
 app.on('ready', () => {
     mainWindow = new BrowserWindow({ title: 'Floyd-Warshall', width: 600, height: 710, resizable: false });
-    mainWindow.setMenu(null)
-    mainWindow.loadURL(`file://${__dirname}/index.html `);
+    //mainWindow.setMenu(null)
+    mainWindow.loadURL(`file://${__dirname}/View/index.html `);
 });
 //recebe o submit calcular, calcula e manda respota para view
 ipcMain.on('mandar', (event, caminhos) => {
